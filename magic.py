@@ -6,6 +6,9 @@ while len(n) != 0:
     except ValueError:
         n = input("Введите число не меньше 4 и не больше 1000: ")
     else:
+        if n < 4 or n > 1000:
+            n = input("Введите число не меньше 4 и не больше 1000: ")
+            continue
         mat = [[0]*n for i in range(n)]
         m = 1
         if n % 2 > 0:
